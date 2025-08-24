@@ -62,3 +62,37 @@ img {
   border: 3px solid white;
   border-radius: 8px;
 }
+
+
+.navbar {
+  background: #222;         /* dark background */
+  padding: 15px;
+  text-align: center;
+  position: sticky;         /* stays at top when scrolling */
+  top: 0;
+  z-index: 1000;            /* stays above other stuff */
+}
+
+.navbar ul {
+  list-style: none;         /* remove bullets */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;          /* horizontal links */
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;    /* no underlines */
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #e74c3c;           /* red on hover */
+}
+
