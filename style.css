@@ -13,7 +13,7 @@ body {
   font-size: 3rem;
   font-weight: bold;
   color: red;
-  animation: flash 2s infinite;
+  animation: flash 3s infinite;
 }
 
 @keyframes flash {
@@ -30,7 +30,7 @@ body {
   text-decoration: none; /* removes underline */
   font-weight: bold;
   border-radius: 8px;
-  font-size: 100px;
+  font-size: 200px;
   transition: background 0.3s;
 }
 
