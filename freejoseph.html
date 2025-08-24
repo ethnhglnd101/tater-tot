@@ -2,75 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FREE JOSEPH!</title>
-  <link rel="stylesheet" href="style.css">
- <meta charset="UTF-8">
   <title>FREE JOSEPH</title>
   <style>
     body {
       margin: 0;
-      overflow: hidden; /* prevent scrollbars when Josephs go wild */
+      overflow: hidden;
       background: black;
     }
 
     .joseph {
       position: absolute;
-      width: 80px; /* size of each Joseph */
+      width: 80px;
       height: auto;
-      pointer-events: none; /* so clicks go through */
+      pointer-events: none;
     }
   </style>
-
-
-  
 </head>
 <body>
 
-  <nav class="navbar">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="freejoseph.html">Free Joseph</a></li>
-    <li><a href="meetthegang.html">Meet the Gang</a></li>
-  </ul>
-</nav>
+<h1 class=flash> JOSEPH IS FREE </h1>
 
   
-  <h1 class=flash > JOSEPH IS FREE </h1>
-
-
-
-
-
-  <a href="index.html" class="btn">BACK TO HOME</a>
-  
-
 <script>
-  const josephSrc = "pngwing.com.png"; // path to your villager png
+  const josephSrc = "images/joseph.png"; // your villager PNG
 
-  // function to spawn a new Joseph
   function spawnJoseph() {
     const img = document.createElement("img");
     img.src = josephSrc;
     img.classList.add("joseph");
 
     // random starting position
-    img.style.left = Math.random() * (window.innerWidth - 80) + "px";
-    img.style.top = Math.random() * (window.innerHeight - 80) + "px";
+    let x = Math.random() * (window.innerWidth - 80);
+    let y = Math.random() * (window.innerHeight - 80);
 
     // random velocity
     let dx = (Math.random() * 4 + 1) * (Math.random() < 0.5 ? 1 : -1);
     let dy = (Math.random() * 4 + 1) * (Math.random() < 0.5 ? 1 : -1);
 
+    img.style.left = x + "px";
+    img.style.top = y + "px";
     document.body.appendChild(img);
 
-    // move Joseph
     function move() {
-      let x = img.offsetLeft + dx;
-      let y = img.offsetTop + dy;
+      x += dx;
+      y += dy;
 
-      // bounce off walls
-      if (x <= 0 || x + img.width >= window.innerWidth) dx *= -1;
-      if (y <= 0 || y + img.height >= window.innerHeight) dy *= -1;
+      // bounce horizontally
+      if (x <= 0 || x + img.width >= window.innerWidth) {
+        dx *= -1;
+      }
+      // bounce vertically
+      if (y <= 0 || y + img.height >= window.innerHeight) {
+        dy *= -1;
+      }
 
       img.style.left = x + "px";
       img.style.top = y + "px";
@@ -80,12 +64,12 @@
     move();
   }
 
-  // spawn the first Joseph
+  // spawn first Joseph
   spawnJoseph();
 
-  // duplicate Joseph every 2 seconds
+  // duplicate every 2 seconds
   setInterval(spawnJoseph, 2000);
 </script>
 
-  </body>
+</body>
 </html>
