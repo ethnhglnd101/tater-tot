@@ -96,3 +96,6 @@ img {
   color: #e74c3c;           /* red on hover */
 }
 
+.center-text {
+  text-align: center;
+}
