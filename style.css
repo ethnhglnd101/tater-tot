@@ -24,13 +24,13 @@ body {
 
 .btn {
   display: inline-block;
-  padding: 100px 200px;
+  padding: 50px 75px;
   background: #FF0000;
   color: black;
   text-decoration: none; /* removes underline */
   font-weight: bold;
   border-radius: 8px;
-  font-size: 120px;
+  font-size: 40px;
   transition: background 0.5s;
 }
 
