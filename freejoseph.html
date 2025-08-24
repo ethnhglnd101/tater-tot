@@ -4,7 +4,23 @@
   <meta charset="UTF-8">
   <title>FREE JOSEPH!</title>
   <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8">
+  <title>FREE JOSEPH</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden; /* prevent scrollbars when Josephs go wild */
+      background: black;
+    }
 
+    .joseph {
+      position: absolute;
+      width: 80px; /* size of each Joseph */
+      height: auto;
+      pointer-events: none; /* so clicks go through */
+    }
+  </style>
+  
 </head>
 <body>
   <h1 class=flash > JOSEPH IS FREE </h1>
@@ -15,5 +31,49 @@
 
   <a href="index.html" class="btn">BACK TO HOME</a>
   
-</body>
+
+<script>
+  const josephSrc = "pngwing.com.png"; // path to your villager png
+
+  // function to spawn a new Joseph
+  function spawnJoseph() {
+    const img = document.createElement("img");
+    img.src = josephSrc;
+    img.classList.add("joseph");
+
+    // random starting position
+    img.style.left = Math.random() * (window.innerWidth - 80) + "px";
+    img.style.top = Math.random() * (window.innerHeight - 80) + "px";
+
+    // random velocity
+    let dx = (Math.random() * 4 + 1) * (Math.random() < 0.5 ? 1 : -1);
+    let dy = (Math.random() * 4 + 1) * (Math.random() < 0.5 ? 1 : -1);
+
+    document.body.appendChild(img);
+
+    // move Joseph
+    function move() {
+      let x = img.offsetLeft + dx;
+      let y = img.offsetTop + dy;
+
+      // bounce off walls
+      if (x <= 0 || x + img.width >= window.innerWidth) dx *= -1;
+      if (y <= 0 || y + img.height >= window.innerHeight) dy *= -1;
+
+      img.style.left = x + "px";
+      img.style.top = y + "px";
+
+      requestAnimationFrame(move);
+    }
+    move();
+  }
+
+  // spawn the first Joseph
+  spawnJoseph();
+
+  // duplicate Joseph every 2 seconds
+  setInterval(spawnJoseph, 2000);
+</script>
+
+  </body>
 </html>
