@@ -8,3 +8,15 @@ body {
   color: white;            /* makes text white */
   font-family: Arial, sans-serif; /* optional: clean font */
 }
+
+.flash {
+  font-size: 3rem;
+  font-weight: bold;
+  color: red;
+  animation: flash 1s infinite;
+}
+
+@keyframes flash {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
