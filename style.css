@@ -53,3 +53,12 @@ body {
 .button:hover {
   background: #151B54
 }
+
+
+img {
+  max-width: 80%;
+  height: auto;
+  margin: 20px 0;
+  border: 3px solid white;
+  border-radius: 8px;
+}
