@@ -1,0 +1,10 @@
+/* style.css */
+
+/* Reset margin so background covers the whole screen */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black; /* makes background black */
+  color: white;            /* makes text white */
+  font-family: Arial, sans-serif; /* optional: clean font */
+}
