@@ -37,3 +37,19 @@ body {
 .btn:hover {
   background: #800000;
 }
+
+.button {
+  display: inline-block;
+  padding: 50px 75px;
+  background: #0000FF;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 40px;
+  transition: background 0.5s;
+}
+
+.button:hover {
+  background: #151B54
+}
