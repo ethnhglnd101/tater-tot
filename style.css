@@ -30,8 +30,8 @@ body {
   text-decoration: none; /* removes underline */
   font-weight: bold;
   border-radius: 8px;
-  font-size: 200px;
-  transition: background 0.3s;
+  font-size: 120px;
+  transition: background 0.5s;
 }
 
 .btn:hover {
