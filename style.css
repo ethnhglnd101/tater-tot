@@ -28,11 +28,12 @@ body {
   background: #FF0000;
   color: black;
   text-decoration: none; /* removes underline */
+  font-weight: bold;
   border-radius: 8px;
   font-size: 100px;
   transition: background 0.3s;
 }
 
 .btn:hover {
-  background: #341f97;
+  background: #800000;
 }
